@@ -1,0 +1,28 @@
+{
+  "mcpName": "io.github.markswendsen-code/uber",
+  "name": "@striderlabs/mcp-uber",
+  "version": "0.1.0",
+  "description": "MCP server connector for Uber ride-sharing — request rides, get fare estimates, track trips via browser automation",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["@striderlabs/mcp-uber"],
+  "tools": [
+    "status",
+    "login",
+    "logout",
+    "set_pickup",
+    "set_destination",
+    "get_fare_estimate",
+    "get_ride_options",
+    "request_ride",
+    "get_ride_status",
+    "cancel_ride",
+    "get_ride_history"
+  ],
+  "repository": "https://github.com/markswendsen-code/mcp-uber",
+  "npm": "https://www.npmjs.com/package/@striderlabs/mcp-uber",
+  "author": "Strider Labs <hello@striderlabs.ai>",
+  "homepage": "https://striderlabs.ai",
+  "license": "MIT",
+  "keywords": ["mcp", "uber", "rideshare", "transportation", "ai-agent"]
+}
