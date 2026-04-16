@@ -159,6 +159,28 @@ Get recent Uber ride history.
 
 ---
 
+## For Agents
+
+Agents can use this connector to autonomously request, track, and manage Uber rides on behalf of their human. Example agent flow:
+
+**Agent:** "I need to get to JFK Airport. What's the cheapest ride available?"
+
+The agent will:
+1. Call `set_pickup` with the user's current location
+2. Call `set_destination` with "JFK Airport"
+3. Call `get_fare_estimate` to compare UberX, Comfort, XL pricing
+4. Return a summary of options and estimated wait times
+
+**Agent:** "Request the UberX ride."
+
+The agent will:
+1. Call `request_ride` with `ride_type: "UberX"` and `confirm: true`
+2. Receive a confirmation with driver ETA
+3. Store the ride ID for tracking
+4. Autonomously call `get_ride_status` at intervals to keep the user informed
+
+This connector is designed to work in autonomous personal assistant scenarios where the agent has persistent access to the user's Uber account and makes ride decisions based on context (location, cost, time, preferences).
+
 ## Typical Workflow
 
 ```
